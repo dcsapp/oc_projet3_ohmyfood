@@ -1,103 +1,104 @@
-.restaurants__container h2 {
-  align-self: start;
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  padding-top: 30px;
-  margin-left: 20px; }
+  text-decoration: none; }
 
-.restaurants__container {
+body {
+  width: 375px;
+  margin: 0 auto;
+  border: 1px solid #000; }
+
+header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  background-color: #f6f6f6;
-  /*  border: 1px solid red; */ }
+  width: 100%; }
 
-.restaurants__card {
-  display: flex;
-  flex-direction: column;
+.header {
+  height: 63px;
   position: relative;
-  width: 340px;
-  background-color: #fff;
-  /*  border: 1px solid blue; */
-  border-radius: 15px; }
-
-img {
-  width: 100%;
-  height: 150px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  object-fit: cover; }
-
-.badge-new {
-  width: 80px;
-  height: 29px;
-  border-radius: 2px;
-  background-color: #99edd0;
-  color: #008766;
-  position: absolute;
-  top: 15px;
-  right: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px; }
-  .badge-new .no-display {
-    display: none; }
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); }
+  .header .goback {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    /* display: none; */ }
+  .header .logo p {
+    font-family: "Shrikhand", cursive;
+    font-size: 30px;
+    font-weight: regular;
+    text-align: center;
+    color: #101010; }
 
-.fa-heart {
-  color: #9356dc;
-  /* background-color:#ff79da; */
-  /* 
-    https://www.djwebcreator.fr/css/des-effets-de-remplissage-en-css/
-   */ }
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  gap: 17px; }
+  .location p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #353535; }
 
-h3 {
-  font-size: 18px;
-  font-weight: bold; }
-
-p {
-  font-size: 17px;
-  font-weight: light;
-  color: #353535; }
-
-.restaurants {
+.hero {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  background-color: #f6f6f6; }
-  .restaurants h2 {
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #f6f6f6;
+  gap: 30px;
+  padding: 30px 0; }
+
+h1 .hero__text-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  width: 275px;
+  text-align: center; }
+
+p .hero__text-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18;
+  text-align: center;
+  width: 275px; }
+
+.button {
+  width: 218px;
+  height: 50px;
+  border-style: none;
+  border-radius: 25px;
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  text-align: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  .button p {
     font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    margin-left: 20px;
-    padding-bottom: 30px; }
+    font-size: 16px;
+    color: #fff;
+    width: 100%; }
 
-.restaurants_container {
-  gap: 15px; }
-
-/* .short-text {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  } */
-.card-menu {
-  position: relative;
+.operating {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 349px;
-  height: 69px;
-  border-radius: 15px;
-  /* border: 1px solid green; */
-  /* padding-top: 5px;
-    padding-bottom: 5px; */
-  /* padding: 15px 15px;
-   */
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; }
-g__title h2 {
+  flex-direction: column;
+  padding-top: 30px; }
+
+.operating__title h2 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 24px;
@@ -253,3 +254,12 @@ p {
    */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px; }
+
+footer {
+  background-color: #000;
+  color: #fff; }
+
+footer h2 {
+  margin-top: 30px;
+  padding-left: 15px;
+  font-family: 'Shrikhand', cursive; }
