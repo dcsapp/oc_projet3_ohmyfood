@@ -256,10 +256,14 @@ p {
   margin-bottom: 20px; }
 
 footer {
-  background-color: #000;
+  background-color: #353535;
   color: #fff; }
 
 footer h2 {
   margin-top: 30px;
   padding-left: 15px;
   font-family: 'Shrikhand', cursive; }
+
+footer a {
+  color: #fff;
+  text-decoration: none; }
