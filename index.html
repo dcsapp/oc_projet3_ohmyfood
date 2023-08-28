@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- fontawesome setup -->
     <link
       rel="stylesheet"
@@ -30,6 +30,189 @@
   </head>
 
   <body>
+    <header>
+      <!-- Goback arrow / Logo / Location -->
+      <div class="header">
+        <div class="goback">
+          <a href="#">
+            <i class="fa-solid fa-xs fa-arrow-left"></i>
+          </a>
+        </div>
 
+        <div class="logo">
+          <p>ohmyfood</p>
+        </div>
+      </div>
+
+      <div class="location">
+        <i class="fa-solid fa-xs fa-location-dot"></i>
+        <p>Paris, Belleville</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero / operation / restaurants -->
+      <div class="hero">
+        <div class="hero__text">
+          <h1 class="hero__text-title">Réserver le menu qui vous convient</h1>
+          <p class="hero__text-subtitle">
+            Découvrez des restaurants d'exeption, sélectionnés par nos soins.
+          </p>
+        </div>
+        <div class="explore">
+          <a href="#">
+            <button class="button">
+              <p>Explorez nos restaurants</p>
+            </button>
+          </a>
+        </div>
+
+        <!-- operating -->
+        <div class="operating">
+          <div class="operating__title">
+            <h2>Fonctionnement</h2>
+          </div>
+
+          <div class="operating__options">
+            <!-- mobile: column  /  desktop: row -->
+            <!-- option 1 -->
+            <div class="card">
+              <div class="card__bullet">1</div>
+              <div class="card__content">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>Choisissez un restaurant</p>
+              </div>
+            </div>
+
+            <!-- option 2 -->
+            <div class="card">
+              <div class="card__bullet">2</div>
+              <div class="card__content">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>Composez votre menu</p>
+              </div>
+            </div>
+
+            <!-- option 3 -->
+            <div class="card">
+              <div class="card__bullet">3</div>
+              <div class="card__content">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>Déguster au restaurant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- restaurants -->
+        <div class="restaurants"></div>
+      </div>
+
+      <div class="operation"></div>
+
+      <div class="restaurants__container">
+        <h2>Restaurants</h2>
+
+        <div class="restaurants__card">
+          <!-- mobile: column / desktop: rows of 2 items -->
+          <div class="badge-new">Nouveau</div>
+          <div>
+            <img
+              class="restaurants__card-img"
+              src="../../assets/images/"
+              alt="restaurant"
+            />
+          </div>
+          <div class="restaurants__card-content">
+            <div class="restaurants__card-content-text">
+              <h3>La palette du goût</h3>
+              <p>Ménilmontant</p>
+            </div>
+            <div class="restaurants__card-content-like">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurants__card">
+          <div class="badge-new">Nouveau</div>
+          <div>
+            <img
+              class="restaurants__card-img"
+              src="../../assets/images/"
+              alt="restaurant"
+            />
+          </div>
+          <div class="restaurants__card-content">
+            <div class="restaurants__card-content-text">
+              <h3>La note enchantée</h3>
+              <p>Charonne</p>
+            </div>
+            <div class="restaurants__card-content-like">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurants__card">
+          <div class="badge-new">Nouveau</div>
+          <div>
+            <img
+              class="restaurants__card-img"
+              src="../../assets/images/"
+              alt="restaurant"
+            />
+          </div>
+          <div class="restaurants__card-content">
+            <div class="restaurants__card-content-text">
+              <h3>A la française</h3>
+              <p>Cité Rouge</p>
+            </div>
+            <div class="restaurants__card-content-like">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurants__card">
+          <div class="badge-new">Nouveau</div>
+          <div>
+            <img
+              class="restaurants__card-img"
+              src="../../assets/images/"
+              alt="restaurant"
+            />
+          </div>
+          <div class="restaurants__card-content">
+            <div class="restaurants__card-content-text">
+              <h3>Le délice des sens</h3>
+              <p>Folie Méricourt</p>
+            </div>
+            <div class="restaurants__card-content-like">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- mobile: column  /  desktop: row -->
+      <h2>ohmyfood</h2>
+      <ul>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a
+          >
+        </li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
