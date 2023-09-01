@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    /* Version 1: static -------------------- */
+    .course-meal {
+    width: 350px;
+    height: 70px;
+    background-color: #353535;
+    color: antiquewhite;
+    border-radius: 15px;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    /* margin-bottom: 20px;
+    margin-top: 20px; */
+    margin: 20px 0 20px 20px
+    }
+
+    .course-detail {
+        /* width: calc(100% - 50px); */  /* 300px */
+        width: 300px;
+        /* flex-basis: auto;
+        flex-grow: 1; */
+        /* flex-grow: 1; */
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+
+        transition: width 500ms;
+        /* align-items: center; */
+        /* padding: 15px; */
+    }
+
+    .course-detail h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    margin: 0;
+    }
+
+    .course-detail p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: antiquewhite;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+
+    .course-detail h3 {
+    /* points de suspension... */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+
+    .course-detail p {
+    /* points de suspension... */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .course-meal-price {
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex: 0 0 baseline;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .course-meal-selected {
+        width: 50px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        color: rgb(0, 0, 0);
+        background-color: #99edd0;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .course-meal:hover .course-detail {
+        cursor: pointer;
+        /* width: calc(100% - 50px); */  /* 250px */
+        width: 250px;
+        transition: all 500ms;
+        transition-timing-function: ease-in-out;
+    }
+
+
+/* Version 2: dynamic -------------------- */
+
+.container_2 {
+    width: 300px;
+    margin: 20px auto;
+}
+
+.menus_list_2 {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+    padding: 30px 30px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: whitesmoke;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card-menu_2 {
+    width: 100%;
+    height: 70px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card-menu_2:nth-child(1) {
+    animation: showMenu 1000ms ease-in-out;
+} 
+
+.card-menu_2:nth-child(2) {
+    animation: showMenu 1500ms ease-in-out;
+} 
+
+.card-menu_2:nth-child(3) {
+    animation: showMenu 2000ms ease-in-out;
+} 
+
+@keyframes showMenu {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.course-meal_2 {
+    width: 100%; 
+    height: 100%; /* 70px; */
+    background-color: #c2bebe;
+    color: #353535;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    flex-shrink: 1;
+    }
+
+    .course-detail_2 {
+        width: calc(100% - 50px);
+        height: 100%; /* 70px; */
+        padding: 0 10px 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: width 500ms;
+    }
+
+    .course-detail_2 h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
+
+    .course-detail_2 p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .course-detail_2 h3, p {
+    /* points de suspension... */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .course-meal-price_2 {
+    background-color: #c2bebe;
+    color: #353535;
+    font-weight: bold;
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    flex-shrink: 0;
+    padding-bottom: 15px;
+   
+    }
+
+     .course-meal-selected_2 {
+        width: 50px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        background-color: #99edd0;
+    } 
+
+    .card-menu_2:hover .course-detail_2 {
+        cursor: pointer;
+        width: calc(100% - 100px);
+        transition: all 500ms;
+    }
+
+
+/* --------------------------------------- */
+
+/* Variables ------- */
+:root {
+    --gap_width: 20;
+    --by_row: 3;
+}
+
+
+  .menus_list_3 {
+    width: 500px;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+    
+    margin: 20px auto;
+    padding: 30px 30px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    background: whitesmoke;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .boxa {
+    width: calc((100% - 40px) / 3);
+
+    /* ((((var(--by_row))-1) * (var(--gap-width)))*1px) */
+    /*  width: calc((100% - ((((var(--by_row))-1) * (var(--gap-width)))*1px)/ var(--by_row)); */
+    height: 100px;
+    flex-shrink: 1;
+    /* flex-shrink: 0;
+    flex-grow: 1; */
+    border: 1px solid black;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .a {
+    background: red;
+  }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit atque dolore suscipit unde hic. Fuga, provident totam odio libero nemo quia animi? At enim expedita atque a necessitatibus maxime repellendus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit atque dolore suscipit unde hic. Fuga, provident totam odio libero nemo quia animi? At enim expedita atque a necessitatibus maxime repellendus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit atque dolore suscipit unde hic. Fuga, provident totam odio libero nemo quia animi? At enim expedita atque a necessitatibus maxime repellendus.
+        </div>
+        <div class="box box-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit atque dolore suscipit unde hic. Fuga, provident totam odio libero nemo quia animi? At enim expedita atque a necessitatibus maxime repellendus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit atque dolore suscipit unde hic. Fuga, provident totam odio libero nemo quia animi? At enim expedita atque a necessitatibus maxime repellendus.
+        </div>
+        </div>
+    </div>
+
+    <div class="card-menu">
+
+        <div class="card-menu__text">
+          <h3>Oeuf au plat</h3>
+          <p>Assaisonné à la truffe sur lit de caviar</p>
+        </div>
+
+        <div class="card-menu__price">
+          <h3>76E</h3>
+        </div>
+
+        <div class="menu-checked">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+      </div>
+
+
+
+      <div class="course-meal">
+        <div class="course-detail">
+            <h3>Pates ou bbbbbbb spaguettis</h3>
+            <p>Pates au pistou et sauce tomate et oignons rouges </p>
+        </div>
+        <div class="course-meal-price">
+            50E
+        </div>
+        <div class="course-meal-selected">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+      </div>
+
+      <hr>
+
+    <div class="card-menu_2">
+      <div class="course-meal_2">
+        <div class="course-detail_2">
+            <h3>Pates ou bbbbbbbbbbbbbbbb spaguettis</h3>
+            <p>Pates au pistou et sauce tomate et oignons rouges </p>
+        </div>
+        <div class="course-meal-price_2">
+            50E
+        </div>
+        <div class="course-meal-selected_2">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container_2">
+    <div class="card-menu_2">
+      <div class="course-meal_2">
+        <div class="course-detail_2">
+            <h3>Pates ou bbbbbbbbbbbbbbbb spaguettis</h3>
+            <p>Pates au pistou et sauce tomate et oignons rouges </p>
+        </div>
+        <div class="course-meal-price_2">
+            50<span>&euro;</span>
+        </div>
+        <div class="course-meal-selected_2">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+      </div>
+    </div>
+</div>
+
+<hr>
+
+
+<div class="menus_list_2">
+    <div class="card-menu_2">
+        <div class="course-meal_2">
+          <div class="course-detail_2">
+              <h3>Pates ou bbbbbbbbbbbbbbbb spaguettis</h3>
+              <p>Pates au pistou et sauce tomate et oignons rouges </p>
+          </div>
+          <div class="course-meal-price_2">
+              50<span>&euro;</span>
+          </div>
+          <div class="course-meal-selected_2">
+              <i class="fa-solid fa-circle-check"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-menu_2">
+        <div class="course-meal_2">
+          <div class="course-detail_2">
+              <h3>Pates ou bbbbbbbbbbbbbbbb spaguettis</h3>
+              <p>Pates au pistou et sauce tomate et oignons rouges </p>
+          </div>
+          <div class="course-meal-price_2">
+              50<span>&euro;</span>
+          </div>
+          <div class="course-meal-selected_2">
+              <i class="fa-solid fa-circle-check"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-menu_2">
+        <div class="course-meal_2">
+          <div class="course-detail_2">
+              <h3>Pates ou bbbbbbbbbbbbbbbb spaguettis</h3>
+              <p>Pates au pistou et sauce tomate et oignons rouges </p>
+          </div>
+          <div class="course-meal-price_2">
+              50<span>&euro;</span>
+          </div>
+          <div class="course-meal-selected_2">
+              <i class="fa-solid fa-circle-check"></i>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+<div class="menus_list_3">
+    <div class="boxa a">
+        a
+    </div>
+    <div class="boxa b">
+        b
+    </div>
+    <div class="boxa c">
+        c
+    </div>
+    <div class="boxa d">
+        d
+    </div>
+    <div class="boxa e">
+        e
+    </div>
+    <div class="boxa f">
+        f
+    </div>
+</div>
+
+</body>
+</html>
