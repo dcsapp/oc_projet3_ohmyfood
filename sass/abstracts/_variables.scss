@@ -1,7 +1,34 @@
+// colors
+$lightGreen: #99e2d0;
+$darkGreen: #008766;
+$lightPurple: #9356dc;
+$darkPurple: #ff79da;
+// background
+$lightGrey: #f6f6f6;
+$mediumGrey: #eaeaea;
+$darkBlack: #000;
+$mediumBlack: #101010;
+$backgroundBlack: #353535; // empty heart   
+
+// box-shadow
+$bs_meals: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+$bs_meals-on: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+// gradients
+// $btn-gradient: linear-gradient(to right bottom, #ff79da, #9356dc);
+$btn-gradient: linear-gradient(to right bottom, $lightPurple, $darkPurple);
+
+// animations
+
+
+// - max meals items
+$maxMeals: 4;
+
+// media queries
 $breakpoints: (
   "xs": 0,
-  "sm": 745,
+  "sm": 375,  // mobile
   "md": 1024,
-  "lg": 1440,
+  "lg": 1440, // desktop
   "xl": 1600,
 );

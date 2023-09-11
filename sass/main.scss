@@ -6,9 +6,12 @@
 @import "base/typography";
 @import "base/utilities";
 @import "components/buttons";
+/* @import "components/heart"; */
 @import "layout/header";
-@import "layout/main-hero";
-@import "layout/main-operating";
-@import "layout/main-restaurants";
+@import "layout/section-hero";
+@import "layout/section-operations";
+@import "layout/section-restaurants";
+@import "layout/resto_section-menu";
+@import "layout/resto_article-meal";
 @import "layout/footer";
 @import "pages/home";

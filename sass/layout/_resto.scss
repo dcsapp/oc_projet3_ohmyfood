@@ -1,0 +1,210 @@
+main {
+    /*  position: relative; */
+  }
+  
+  .background {
+    background: lightblue;
+    position: relative;
+    width: auto;
+    @include flex-center;
+    flex-shrink: 1;
+    top: -40px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: #f6f6f6;
+    border-radius: 40px 40px 0 0;
+    margin: auto;
+  
+    position: relative;
+    /* top: -40px; */
+  
+    &__title {
+      display: flex;
+      align-items: center;
+      /*  @include flex-center; */
+      padding-top: 25px;
+      padding-left: 10px;
+      /* justify-content: space-evenly; */
+      gap: 30px;
+  
+      &__name {
+        font-family: "Shrikhand", cursive;
+        font-size: 28px;
+        color: #101010;
+      }
+      &__like {
+        width: 21px;
+        height: 21px;
+        /* @include flex-center; */
+        /* color: #101010; */
+        /* color: transparent;
+        text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+          1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000; */
+        font-size: 28px;
+        font-weight: 300;
+        &:hover i {
+          cursor: pointer;
+          background: $btn-gradient; /* linear-gradient(60deg, red, yellow, red, yellow, red); */
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: rgba(0, 0, 0, 0.2);
+          /* color: green; */
+        }
+        /* &__heart, i {
+          color: #101010;
+          font-size: 21px;
+          font-weight: 300;
+        } */
+      }
+    }
+  }
+  
+  
+
+
+
+.menu__course {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 375px;
+    &__name {
+      align-self: flex-start;
+      padding-left: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 3px;
+        top: 25px;
+        background: #99e2d0;
+      }
+      /* &__underline {
+        width: 40px;
+        color: #99e2d0;
+        align-self: flex-start;
+        margin-left: 10px;
+        border-bottom: 3px solid #99e2d0;
+      } */
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    &__meal {
+      width: 349px;
+      height: 69px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: $bs_meals;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      /*  */
+      &__details {
+        width: calc(100% - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        flex-shrink: 0;
+        transition: width 1000ms;
+        &__name {
+          @include ellipsis;
+          padding-left: 15px;
+          font-size: 18px;
+          font-weight: 400;
+        }
+        &__description {
+          @include ellipsis;
+          padding-left: 15px;
+          font-size: 15px;
+          font-weight: 300;
+        }
+      }
+      &__price {
+        width: 50px;
+        height: 69px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        flex-shrink: 0;
+        &__details {
+          margin-bottom: 15px;
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+  
+      &__checked {
+        @include flex-center;
+        color: #fff;
+        background: #99e2d0;
+        flex-shrink: 0;
+        width: 50px;
+        height: 69px;
+      }
+  
+      @include mealAnimation();
+      &:hover &__details {
+        cursor: pointer;
+        width: calc(100% - 100px);
+        transition: 500ms;
+      }
+    }
+    &__button {
+      width: 186px;
+      height: 50px;
+      border-radius: 25px;
+      @include flex-center;
+      @include btn-off;
+      margin: 0 auto;
+      &:hover {
+        cursor: pointer;
+        @include btn-on;
+      }
+      &__text {
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+  }
+
+  @include bpAt(lg) {
+    .menu {
+      margin: 0 auto;
+      /* position: absolute; */
+     /*  top: -40px; */
+      width: 1055px;
+      border-radius: 40px 40px 0 0;
+      @include flex-center;
+      gap: 50px;
+    }
+  }
+
+
+  @include bpAt(lg) {
+    .menu__course {
+      width: 634px;
+      &__meal {
+        width: 634px;
+      }
+    }
+  }  
+
+  .colorPurple {
+    color: $lightPurple;
+  }

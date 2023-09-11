@@ -1,0 +1,20 @@
+@keyframes displayMeals {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes heart {
+    0% {
+        font-size: 0px;
+        background-image: $btn-gradient;
+    }
+    100% {
+        font-size: 28px;
+        background-image: $btn-gradient;
+    }
+    
+}

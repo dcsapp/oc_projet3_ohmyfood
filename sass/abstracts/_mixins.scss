@@ -1,24 +1,72 @@
-@mixin short-text {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  
-  @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @mixin flex-bl {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
+// flex setup
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-bl {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
 // Breakpoints / definition in variables
-@mixin bp_at($bp) {
-  @media(min-width: map-get($breakpoints, $bp)) {
+@mixin bpAt($bp) {
+  @media (min-width: map-get($breakpoints, $bp)+px) {
     @content;
   }
+}
+
+// HEART
+@mixin heartLike() {
+  cursor: pointer;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $btn-gradient;
+  transition: 400ms;
+  animation: heart 500ms ease-in;
+}
+
+// Ellipsis
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// images
+@mixin image($height) {
+  height: $height;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@mixin mealAnimation($a: $maxMeals) {
+  @for $i from 1 through $a {
+    &:nth-child(#{$i}) {
+      animation: displayMeals #{$i * 500}ms ease-in-out;
+    }
+  }
+}
+
+@mixin count_item {
+  $count: 0;
+  @while $count < 11 {
+    &:nth-child(#{$count}) {
+      $count: $count + 1;
+    }
+  }
+}
+
+@mixin btn-off {
+  background: linear-gradient(210deg, #ff79da, #9356dc);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin btn-on {
+  opacity: 0.85;
+  background: linear-gradient(175deg, #ff79da, #9356dc);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
