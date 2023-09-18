@@ -1,0 +1,52 @@
+.loader__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $backgroundBlack;
+  z-index: 2;
+  opacity: 0.9;
+  animation: removeLoader 500ms 5s;
+  animation-fill-mode: forwards;
+  transform-origin: bottom;
+
+  &__cheers {
+    display: flex;
+    flex-direction: column;
+    &__glasses {
+      @include flex-center;
+    }
+
+    &__glasses i:nth-child(1) {
+      width: 60px;
+      height: 100px;
+      font-size: 90px;
+      color: $lightGreen;
+      @include wine;
+    }
+    &__glasses i:nth-child(2) {
+      width: 100px;
+      height: 100px;
+      /* border: 1px solid red; */
+      font-size: 90px;
+      color: $lightPurple;
+      /* transform: translateY(-5px) rotate(-10deg); */
+      @include cocktail;
+    }
+  }
+
+  h2 {
+    margin-top: 20px;
+    color: $darkPurple;
+    font-family: "Shrikhand", cursive;
+    font-size: 20px;
+    font-weight: regular;
+    opacity: 1;
+    @include loaderTitle;
+  }
+}

@@ -1,32 +1,22 @@
 main {
   margin: 0 auto;
 }
-/* .restaurant {
-  position: absolute;
-  
-  top: -25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding-top: 30px;
-  padding: 50px;
-  background-color: #f6f6f6;
-   border: 1px solid red;
-} */
-
 .restaurants {
-  position: relative;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
   padding-top: 30px;
-  margin-bottom: 50px;
-  background-color: #f6f6f6;
+  padding-bottom: 50px;
+  background-color: $lightGrey;
   &__section__title {
-    margin-left: 20px;
-    align-self: start;
+    width: 340px;
+    display: flex;
+   /*  @include flex-center; */
+    justify-content: flex-start;
+    text-align: left;
+    
     &__section__text {
       font-family: "Roboto", sans-serif;
       font-weight: bold;
@@ -45,7 +35,7 @@ main {
       flex-direction: column;
       position: relative;
       width: 340px;
-      background-color: #fff;
+      background-color: $fullWhite;
       border-radius: 15px;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
       &__img {
@@ -59,14 +49,14 @@ main {
         width: 80px;
         height: 29px;
         border-radius: 2px;
-        background-color: #99edd0;
-        color: #008766;
+        background-color: $lightGreen;
+        color: $darkGreen;
         position: absolute;
         top: 15px;
         right: 15px;
 
         @include flex-center;
-       /*  display: flex;
+        /*  display: flex;
         justify-content: center;
         align-items: center; */
 
@@ -85,82 +75,95 @@ main {
           gap: 5px;
 
           &__name {
-            color: #000;
+            color: $darkBlack;
             font-size: 18px;
             font-weight: bold;
           }
           &__location {
-            color: #000;
+            color: $darkBlack;
             font-size: 17px;
             font-weight: light;
           }
         }
         &__like {
           @include flex-center;
-          font-size: 25px;
-
-          
+          font-size: 21px;
+          font-weight: 300;
+          color: $darkBlack;
           &:hover {
             cursor: pointer;
           }
-/*  */
-/* position: relative;
-      width: 21px;
-      height: 21px;
-      @include flex-center;
-      color: $mediumBlack; */
-
-      /* color: transparent;
-      text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
-        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000; */
-      font-size: 28px;
-      font-weight: 300;
-
-      & .fa-solid {
-        position: absolute;
-        color: transparent;
-      }
-
-      /* &:hover .fa-regular .fa-solid {
-        cursor: pointer;
-        color: purple;
-        background-color: green;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $btn-gradient;
-        color: transparent;
-      } */
-
-      &:hover .fa-solid {
-        @include heartLike
-        /* cursor: pointer;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $btn-gradient;
-        transition: 400ms;
-        animation: heart 300ms ease-in; */
-      }
-/*  */
-
+          /*  */
+          & .fa-solid {
+            position: absolute;
+            color: transparent;
+          }
+          &:hover .fa-solid {
+            @include heartLike;
+          }
+          /*  */
         }
       }
     }
   }
 }
 
-/* 
-  &__container {
-    align-self: start;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    padding-top: 30px;
-    margin-left: 20px;
-  } */
+@include bpAt(smt) {
+  .restaurants {
+    padding: 30px 50px;
+    &__section__title {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
+  .restaurants__list {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 
-// desktop
+    gap: 28px;
+    &__card {
+      flex-basis: 40%; // 2 resto sper row
+      width: auto;
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+  }
+}
+
+// 1024px
+@include bpAt(md) {
+  .restaurants {
+    max-width: 100%;
+    padding: 30px 100px;
+    margin-bottom: 0px;
+    &__section__title {
+      margin-left: 0px;
+    }
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      /* @include flex-center; */
+      justify-content: space-between;
+      gap: 50px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      &__card {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+// desktop / 1440px
 @include bpAt(lg) {
   .restaurants {
+    max-width: 100%;
     padding: 30px 180px;
     margin-bottom: 0px;
     &__section__title {

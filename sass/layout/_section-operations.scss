@@ -1,8 +1,10 @@
 .operations {
+  max-width: 375px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  background: #fff;
+  background: $fullWhite;
 
   &__title {
     margin-left: 20px;
@@ -28,14 +30,14 @@
       width: 322.49px;
       height: 72.38px;
       border-radius: 20px;
-      background-color: #f6f6f6;
+      background-color: $lightGrey;
       box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 
       &__bullet {
         position: absolute;
         height: 24px;
         width: 24px;
-        background-color: #9356dc;
+        background-color: $lightPurple;
         border-radius: 20px;
         display: flex;
         justify-content: center;
@@ -45,7 +47,7 @@
         transform: translate(-50%, -50%);
         font-family: "Roboto", sans-serif;
         font-size: 14px;
-        color: #f6f6f6;
+        color: $lightGrey;
       }
 
       &__content {
@@ -58,7 +60,7 @@
         font-family: "Roboto", sans-serif;
         font-weight: bold;
         font-size: 16px;
-        color: #000;
+        color: $darkBlack;
       }
     }
   }
@@ -67,6 +69,7 @@
 // desktop
 @include bpAt(lg) {
   .operations {
+    max-width: 100%;
     padding-top: 0px;
     margin: 50px 180px;
     &__title {

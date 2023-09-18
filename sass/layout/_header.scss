@@ -13,7 +13,7 @@
       &__goback {
         position: absolute;
         @include flex-center;
-        color: #353535;
+        color: $backgroundBlack;
         top: 15px;
         left: 15px;
         width: 30px;
@@ -24,13 +24,16 @@
           display: none;
         }
       }
+      &__goback a:hover {
+        color: $mediumBlack;
+      }
       &__title {
         &__text {
           font-family: "Shrikhand", cursive;
           font-size: 30px;
           font-weight: regular;
           text-align: center;
-          color: #101010;
+          color: $mediumBlack;
         }
       }
     }
@@ -47,7 +50,7 @@
       &__text {
         font-family: "Roboto", sans-serif;
         font-size: 16px;
-        color: #353535;
+        color: $backgroundBlack;
       }
     }
 
@@ -67,20 +70,19 @@
     &__logo {
       height: 96px;
       box-shadow: none;
-    
-    &__goback {
-      top: 30px;
-      left: 30px;
+
+      &__goback {
+        top: 30px;
+        left: 30px;
+      }
+      &__location {
+        box-shadow: none;
+      }
     }
-    &__location {
-      box-shadow: none;
+    &__img {
+      width: 100%;
+      height: 383px;
+      object-fit: cover;
     }
   }
-  &__img {
-    width: 100%;
-    height: 383px;
-    object-fit: cover;
-    /* z-index: -10; */
-  }
-}
 }

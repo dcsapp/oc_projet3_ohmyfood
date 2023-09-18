@@ -13,8 +13,53 @@
         background-image: $btn-gradient;
     }
     100% {
-        font-size: 28px;
+        font-size: 21px;
         background-image: $btn-gradient;
     }
-    
+}
+
+@keyframes cocktail {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-10deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+} 
+
+@keyframes wine {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-50px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(0px) rotate(15deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+} 
+
+@keyframes loaderTitle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes removeLoader {
+    to {
+        transform: scale(0);
+        position: top;
+    }
 }

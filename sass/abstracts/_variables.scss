@@ -4,6 +4,7 @@ $darkGreen: #008766;
 $lightPurple: #9356dc;
 $darkPurple: #ff79da;
 // background
+$fullWhite: #fff;
 $lightGrey: #f6f6f6;
 $mediumGrey: #eaeaea;
 $darkBlack: #000;
@@ -28,7 +29,8 @@ $maxMeals: 4;
 $breakpoints: (
   "xs": 0,
   "sm": 375,  // mobile
+  "smt": 768,
   "md": 1024,
   "lg": 1440, // desktop
-  "xl": 1600,
+  "xl": 1441, // 1600,
 );

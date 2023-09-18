@@ -5,6 +5,7 @@
   align-items: center;
   gap: 12px;
   width: 375px;
+  margin: auto;
   &__name {
     align-self: flex-start;
     padding-left: 10px;
@@ -19,7 +20,7 @@
       width: 40px;
       height: 3px;
       top: 25px;
-      background: #99e2d0;
+      background: $lightGreen;
     }
   }
   &__list {
@@ -31,7 +32,7 @@
   &__meal {
     width: 349px;
     height: 69px;
-    background: #fff;
+    background: $fullWhite;
     border-radius: 20px;
     box-shadow: $bs_meals;
     display: flex;
@@ -75,8 +76,8 @@
 
     &__checked {
       @include flex-center;
-      color: #fff;
-      background: #99e2d0;
+      color: $fullWhite;
+      background: $lightGreen;
       flex-shrink: 0;
       width: 50px;
       height: 69px;
@@ -102,15 +103,30 @@
     }
     &__text {
       font-size: 16px;
-      color: #fff;
+      color: $fullWhite;
     }
   }
 }
-@include bpAt(lg) {
+
+@include bpAt(smt) {
   .menu__course {
+    margin: auto;
+    width: 434px;
+    &__meal {
+      width: 434px;
+    }
+  }
+}
+
+@include bpAt(md) {
+  .menu__course {
+    margin: auto;
     width: 634px;
     &__meal {
       width: 634px;
     }
   }
+}
+
+@include bpAt(lg) {
 }

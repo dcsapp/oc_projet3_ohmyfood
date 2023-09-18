@@ -1,3 +1,7 @@
+// fictive border
+@mixin fB {
+  border: 1px solid red;
+}
 // flex setup
 @mixin flex-center {
   display: flex;
@@ -18,14 +22,24 @@
   }
 }
 
+// LOADER
+@mixin cocktail() {
+  animation: cocktail 2s 2s ease-out;
+}
+@mixin wine() {
+  animation: wine 2s ease-out;
+}
+@mixin loaderTitle() {
+  animation: loaderTitle 3s ease-out;
+}
+
 // HEART
 @mixin heartLike() {
   cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: $btn-gradient;
-  transition: 400ms;
-  animation: heart 500ms ease-in;
+  animation: heart 500ms ease-out;
 }
 
 // Ellipsis

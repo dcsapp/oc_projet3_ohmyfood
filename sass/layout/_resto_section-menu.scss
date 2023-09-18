@@ -1,11 +1,16 @@
-main {
-  /*  position: relative; */
-}
-
+/* 
+== Previous option to fix menu over image
 .resto-image-container {
   height: 235px;
   overflow: visible;
 }
+.resto-image {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+ */
+
 .resto-image {
   width: 100%;
   height: 275px;
@@ -16,17 +21,15 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background: #f6f6f6;
+  background: $lightGrey;
   border-radius: 40px 40px 0 0;
   margin: auto;
+  margin-top: -40px;
   padding-bottom: 50px;
 
   /* menu over overflowing image*/
   position: relative;
-  z-index: 10;
-
-  /* position: relative;
-  top: -40px; */
+  z-index: 2;
 
   &__title {
     display: flex;
@@ -42,63 +45,44 @@ main {
     }
     &__like {
       position: relative;
-      width: 21px;
+      width: 22px;
       height: 21px;
       @include flex-center;
       color: $mediumBlack;
-
-      /* color: transparent;
-      text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
-        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000; */
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 300;
 
       & .fa-solid {
         position: absolute;
         color: transparent;
       }
-
-      /* &:hover .fa-regular .fa-solid {
-        cursor: pointer;
-        color: purple;
-        background-color: green;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $btn-gradient;
-        color: transparent;
-      } */
-
       &:hover .fa-solid {
-        @include heartLike
-        /* cursor: pointer;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $btn-gradient;
-        transition: 400ms;
-        animation: heart 300ms ease-in; */
+        @include heartLike;
       }
-      /* &__heart, i {
-        color: #101010;
-        font-size: 21px;
-        font-weight: 300;
-      } */
     }
   }
 }
-@include bpAt(lg) {
-  .resto-image-container {
-    height: 343px;
-    overflow: visible;
+
+// tablet 768
+@include bpAt(smt) {
+  .menu {
+    width: 600px;
   }
+}
+// 1024px
+@include bpAt(md) {
+  .menu {
+    width: 900px;
+  }
+}
+// desktop 1440px
+@include bpAt(lg) {
   .resto-image {
     width: 100%;
     height: 383px;
     object-fit: cover;
   }
   .menu {
-    margin: 0 auto;
-    /* position: absolute; */
-    /*  top: -40px; */
     width: 1055px;
     border-radius: 40px 40px 0 0;
     @include flex-center;

@@ -11,11 +11,13 @@ html {
 }
 
 body {
-    /* width: 375px; */
     margin: 0 auto;
-   /*  border: 1px solid #000; */
+   @include bpAt(lg) {
+    max-width: 1440px;
+   }
 }
 
 a {
     text-decoration: none;
 }
+
