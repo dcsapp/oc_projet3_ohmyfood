@@ -135,7 +135,7 @@ a {
         font-weight: bold; }
         .header__logo__goback--off {
           display: none; }
-      .header__logo__goback a:hover {
+      .header__logo__goback a {
         color: #101010; }
       .header__logo__title__text {
         font-family: "Shrikhand", cursive;
@@ -216,10 +216,12 @@ a {
       /* background: linear-gradient(to right bottom, #ff79da, #9356dc); */
       background: linear-gradient(to right bottom, #9356dc, #ff79da);
       text-align: center;
-      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); }
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      transition: all 500ms; }
       .hero__explore__btn:hover {
         cursor: pointer;
-        opacity: 0.7; }
+        opacity: 0.7;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5); }
       .hero__explore__btn__text {
         font-family: "Roboto", sans-serif;
         font-size: 16px;
@@ -641,14 +643,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(210deg, #ff79da, #9356dc);
+    margin: 0 auto;
+    background: linear-gradient(to right bottom, #9356dc, #ff79da);
+    text-align: center;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    margin: 0 auto; }
+    transition: all 500ms; }
     .menu__course__button:hover {
       cursor: pointer;
-      opacity: 0.85;
-      background: linear-gradient(175deg, #ff79da, #9356dc);
-      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35); }
+      opacity: 0.7;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5); }
     .menu__course__button__text {
       font-size: 16px;
       color: #fff; }
