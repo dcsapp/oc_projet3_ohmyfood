@@ -41,7 +41,8 @@
 @keyframes removeLoader {
   to {
     transform: scale(0);
-    position: top; } }
+    /*  position: top; */
+    bottom: 100px; } }
 
 * {
   margin: 0;
@@ -105,7 +106,7 @@ a {
     color: #ff79da;
     font-family: "Shrikhand", cursive;
     font-size: 20px;
-    font-weight: regular;
+    font-weight: 400;
     opacity: 1;
     animation: loaderTitle 3s ease-out; }
 
@@ -140,7 +141,7 @@ a {
       .header__logo__title__text {
         font-family: "Shrikhand", cursive;
         font-size: 30px;
-        font-weight: regular;
+        font-weight: 400;
         text-align: center;
         color: #101010; }
     .header__location {
@@ -200,7 +201,7 @@ a {
     .hero__details__subtitle {
       font-family: "Roboto", sans-serif;
       font-weight: 300;
-      font-size: 18;
+      font-size: 18px;
       color: #353535;
       text-align: center;
       width: 315px; }
@@ -383,7 +384,7 @@ main {
           .restaurants__list__card__content__text__location {
             color: #000;
             font-size: 17px;
-            font-weight: light; }
+            font-weight: 300; }
         .restaurants__list__card__content__like {
           display: flex;
           justify-content: center;

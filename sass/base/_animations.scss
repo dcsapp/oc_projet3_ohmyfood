@@ -60,6 +60,7 @@
 @keyframes removeLoader {
     to {
         transform: scale(0);
-        position: top;
+       /*  position: top; */
+       bottom: 100px;
     }
 }
